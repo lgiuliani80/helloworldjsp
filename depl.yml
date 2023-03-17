@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellotomcat-deployment
+  labels:
+    app: hellotomcat
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hellotomcat
+  template:
+    metadata:
+      labels:
+        app: hellotomcat
+    spec:
+      containers:
+      - name: hellotomcat
+        image: javaonazurecr.azurecr.io/testdockertomcat:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: "750m"
+            memory: 2Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hellotomcat-service
+spec:
+  selector:
+    app: hellotomcat
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080

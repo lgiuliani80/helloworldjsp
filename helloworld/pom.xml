@@ -25,7 +25,7 @@
               <configuration>
                   <schemaVersion>v2</schemaVersion>
                   <resourceGroup>TestJavaOnAzure</resourceGroup>
-                  <appName>testjavaontomcat</appName>
+                  <appName>testalexappjava</appName>
                   <pricingTier>B1</pricingTier>
                   <region>eastus</region>
                   <runtime>
