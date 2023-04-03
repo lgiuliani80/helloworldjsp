@@ -7,7 +7,7 @@
 - Deploy su AppService (Tomcat 10):
 
         mvn clean package
-        az webapp deploy --resource-group TestJavaOnAzure --name    testalexappjava --src-path .\target\helloworld.war --type war
+        az webapp deploy --resource-group TestJavaOnAzure --name testalexappjava --src-path .\target\helloworld.war --type war
 
 - Deploy su AppService (Tomcat 10) via plugin azure-webapp-maven-plugin: 
 
