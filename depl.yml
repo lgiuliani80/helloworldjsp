@@ -16,13 +16,13 @@ spec:
     spec:
       containers:
       - name: hellotomcat
-        image: javaonazurecr.azurecr.io/testdockertomcat:latest
+        image: javaonazurecr.azurecr.io/testdockertomcat:20230403.1
         ports:
         - containerPort: 8080
         resources:
           limits:
-            cpu: "750m"
-            memory: 2Gi
+            cpu: "250m"
+            memory: 0.5Gi
 ---
 apiVersion: v1
 kind: Service
